@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-50: #eff5ff;
+  --color-navy-100: #dbe8ff;
+  --color-navy-200: #b9d0fd;
+  --color-navy-300: #8db0f7;
+  --color-navy-400: #5a88ec;
+  --color-navy-500: #3564d8;
+  --color-navy-600: #244bb8;
+  --color-navy-700: #1b3a94;
+  --color-navy-800: #13306f;
+  --color-navy-900: #0b1f4b;
+
+  --color-leaf-50: #eefcf4;
+  --color-leaf-100: #d5f7e4;
+  --color-leaf-200: #aaeecb;
+  --color-leaf-300: #72dfa8;
+  --color-leaf-400: #3fc984;
+  --color-leaf-500: #1faf65;
+  --color-leaf-600: #128a4f;
+  --color-leaf-700: #106c40;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+.rich-text {
+  white-space: pre-line;
+  line-height: 1.75;
+}
+
+.card-hover {
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease,
+    border-color 150ms ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -18px rgba(11, 31, 75, 0.55);
+  border-color: var(--color-navy-300);
+}
+
+::selection {
+  background: var(--color-leaf-200);
+  color: var(--color-navy-900);
+}
